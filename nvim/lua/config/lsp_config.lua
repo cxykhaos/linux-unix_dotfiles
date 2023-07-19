@@ -32,7 +32,6 @@ require("lspconfig").gopls.setup{
 			},
 			experimentalPostfixCompletions = true,
 			gofumpt = true,
-			staticcheck = true,
 			usePlaceholders = true,
 		},
 	},
