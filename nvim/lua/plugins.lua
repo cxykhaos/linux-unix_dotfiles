@@ -238,7 +238,16 @@ return require('packer').startup(function()
       'glepnir/galaxyline.nvim',      --statusline.
       config=[[require('config.galaxy_line')]],
   }
-  use 'glepnir/dashboard-nvim'        --Startup dashboard
+  use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+    }
+  end,
+  requires = {'nvim-tree/nvim-web-devicons'}
+}
   -- use {
   --     'anuvyklack/pretty-fold.nvim',    -- Pretty fold (does not work)
   --     config = [[require('config.pretty_fold')]],
