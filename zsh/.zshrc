@@ -102,26 +102,12 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.alias
 source $HOME/.export
-# ======================== Path Environment variable ========================
-# Hook direnv to zsh
-eval "$(direnv hook zsh)"
 
 # ============================= Scripts =====================================
 # Auto start miniconda.
 # source /home/ikkyu/miniconda3/bin/activate
 # Bind V to edit command in vim editor
 bindkey -M vicmd V edit-command-line
-
-# ============================ Plugin Start================================
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-source $ZINIT_HOME/zinit.zsh
-
-zinit ice depth"1" # git clone depth
-zinit light romkatv/powerlevel10k
-# NOTE: Make sure fzf and fasd has been install on your system.
-zinit light wookayin/fzf-fasd
-zinit light Aloxaf/fzf-tab
-zinit light agkozak/zsh-z
 
 # ============================ Plugin End ================================
 
@@ -133,14 +119,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
 ## pip3 install thefuck
