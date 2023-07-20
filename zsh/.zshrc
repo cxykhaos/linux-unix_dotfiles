@@ -123,3 +123,4 @@ export NVM_DIR="$HOME/.nvm"
 ### End of Zinit's installer chunk
 ## pip3 install thefuck
 eval $(thefuck --alias)
+eval "$(lua $(brew --prefix z.lua)/share/z.lua/z.lua --init zsh)"
